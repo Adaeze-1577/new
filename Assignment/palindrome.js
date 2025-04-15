@@ -1,14 +1,26 @@
 function isPalindrome(str) {
-    const cleanStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
-    let left = 0;
-    let right = cleanStr.length - 1;
     
-    while (left < right) {
-        if (cleanStr[left] !== cleanStr[right]) {
+    let cleanStack = [];
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i].toLowerCase();
+        if ((char >= 'a' && char <= 'z') || (char >= '0' && char <= '9')) {
+            cleanStack.push(char);
+        }
+    }
+    
+    
+    let reversedStack = [];
+    let tempStack = [...cleanStack]; 
+    while (tempStack.length > 0) {
+        reversedStack.push(tempStack.pop());
+    }
+    
+    
+    while (cleanStack.length > 0 && reversedStack.length > 0) {
+        if (cleanStack.pop() !== reversedStack.pop()) {
             return false;
         }
-        left++;
-        right--;
     }
+    
     return true;
 }
