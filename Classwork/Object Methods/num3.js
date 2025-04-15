@@ -1,6 +1,6 @@
 const settings = {
     theme: "dark",
-    notifications: true,
+    notification: true,
 };
 
 Object.freeze(settings);

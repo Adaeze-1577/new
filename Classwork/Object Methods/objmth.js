@@ -1,10 +1,10 @@
 let personalInfo = {
-    name: "Alice ApeJoye",
+    name: "Alice Akor",
     age: 30,
 };
 
 let contactInfo = {
-    email: "aliceapejoye@gmsil.com",
+    email: "aliceakor@gmsil.com",
     phone: "08145567890",
 };
 
